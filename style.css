@@ -1,0 +1,182 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #89d4cf, #6e45e2);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.container, .quiz-container, .result-container, .settings-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.8em;
+    color: #4e54c8;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #4e54c8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 10px;
+    background: linear-gradient(to right, #89d4cf, #6e45e2);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress-bar div {
+    height: 100%;
+    background: #4e54c8;
+    width: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(145deg, #89d4cf, #6e45e2);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(145deg, #6e45e2, #89d4cf);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+    background: rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
+}
+
+/* Inputs */
+input[type="number"], input[type="text"] {
+    width: 80%;
+    padding: 15px;
+    font-size: 1.1em;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+    border-color: #6e45e2;
+    box-shadow: 0 0 8px rgba(110, 69, 226, 0.3);
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Choice Labels */
+label.radio {
+    display: block;
+    padding: 10px 15px;
+    margin: 10px auto;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+label.radio:hover {
+    background: rgba(110, 69, 226, 0.1);
+    color: #4e54c8;
+}
+
+/* Table for Results */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+table th {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+table td {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+table td:nth-child(2) {
+    color: #ff6347;
+}
+
+table td:nth-child(1) {
+    color: #28a745;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    button {
+        width: 100%;
+    }
+}
